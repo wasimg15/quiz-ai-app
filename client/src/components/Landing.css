@@ -1,0 +1,165 @@
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px;
+}
+
+.landing-card {
+  background: #1f2937;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.landing-title {
+  font-size: 2.5rem;
+  color: #f3f4f6;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.landing-subtitle {
+  color: #9ca3af;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.role-selector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.role-btn {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #4f46e5;
+  background: #374151;
+  color: #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+  background: #4f46e5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.role-btn.active {
+  background: #4f46e5;
+  color: white;
+}
+
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name-input {
+  padding: 15px;
+  border: 2px solid #4b5563;
+  background: #374151;
+  color: #f3f4f6;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.name-input:focus {
+  border-color: #4f46e5;
+}
+
+.join-btn {
+  padding: 15px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+}
+
+.organizer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.organizer-text {
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.password-input {
+  padding: 15px;
+  border: 2px solid #4b5563;
+  background: #374151;
+  color: #f3f4f6;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.password-input:focus {
+  border-color: #ec4899;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin: -10px 0 10px 0;
+}
+
+.organizer-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.organizer-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .landing-card {
+    padding: 30px 20px;
+  }
+
+  .landing-title {
+    font-size: 2rem;
+  }
+
+  .role-selector {
+    flex-direction: column;
+  }
+
+  .role-btn {
+    width: 100%;
+  }
+}
