@@ -5,18 +5,9 @@ services:
     env: node
     buildCommand: cd server && npm install
     startCommand: cd server && node index.js
-    envVars:
-      - key: PORT
-        value: "10000"
-      - key: CLIENT_URL
-        sync: false
 
   # Frontend Service
-  - type: web
+  - type: site
     name: quiz-app-frontend
-    env: static
     buildCommand: cd client && npm install && npm run build
     publishPath: client/build
-    envVars:
-      - key: REACT_APP_BACKEND_URL
-        sync: false
