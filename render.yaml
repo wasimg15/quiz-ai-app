@@ -1,12 +1,10 @@
 services:
-  # Backend Service
   - type: web
     name: quiz-app-backend
     env: node
     buildCommand: cd server && npm install
     startCommand: cd server && node index.js
 
-  # Frontend Service
   - type: site
     name: quiz-app-frontend
     buildCommand: cd client && npm install && npm run build
