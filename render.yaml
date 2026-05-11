@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: quiz-app-backend
+    name: quiz-ai-app-backend
     env: node
     buildCommand: cd server && npm install
     startCommand: cd server && node index.js
@@ -8,12 +8,12 @@ services:
       - key: PORT
         value: 10000
       - key: CLIENT_URL
-        value: https://quiz-ai-gwa.onrender.com
+        value: https://quiz-ai-app.onrender.com
 
   - type: site
-    name: quiz-ai-gwa
+    name: quiz-ai-app
     buildCommand: cd client && npm install && npm run build
     publishPath: client/build
     envVars:
       - key: REACT_APP_BACKEND_URL
-        value: https://quiz-app-backend.onrender.com
+        value: https://quiz-ai-app-backend.onrender.com
