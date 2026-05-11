@@ -10,11 +10,10 @@ services:
       - key: CLIENT_URL
         value: https://quiz-ai-app.onrender.com
 
-  - type: web
+  - type: static
     name: quiz-ai-app
-    env: node
     buildCommand: cd client && npm install && npm run build
-    startCommand: cd client && npm install -g serve && serve -s build -l 10000
+    publishPath: client/build
     envVars:
       - key: REACT_APP_BACKEND_URL
         value: https://quiz-ai-app-backend.onrender.com
